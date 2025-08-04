@@ -5,177 +5,33 @@
   <title>Kalkulator Gaji Part Time</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
-    /* ====== Reset & Base ====== */
-    html, body {
-      margin: 0; padding: 0;
-      background: #f7f7fb;
-      font-family: 'Inter', Arial, sans-serif;
-    }
-
-    /* ====== Main Layout ====== */
-    .container {
-      max-width: 420px;
-      margin: 48px auto;
-      background: #fff;
-      border-radius: 16px;
-      box-shadow: 0 2px 12px #1111;
-      padding: 28px 18px 15px;
-    }
-
-    /* ====== Typography ====== */
-    h2 {
-      text-align: center;
-      letter-spacing: -0.5px;
-      font-weight: 600;
-      margin-top: 0;
-    }
-
-    label {
-      display: block;
-      font-size: 1.06em;
-      font-weight: 500;
-      margin-top: 15px;
-      margin-bottom: 6px;
-    }
-
-    /* ====== Form Elements ====== */
-    input[type="number"] {
-      width: 99%;
-      font-size: 1em;
-      padding: 10px;
-      margin-bottom: 10px;
-      border-radius: 6px;
-      border: 1.5px solid #ececec;
-      background: #f9f9fd;
-      box-sizing: border-box;
-    }
-
-    input[type="number"]:focus {
-      border-color: #1fbe7b;
-      background: #fff;
-    }
-
-    input[type="checkbox"] {
-      vertical-align: middle;
-      margin-right: 5px;
-    }
-
-    /* ====== KWSP Custom Section ====== */
-    .kwsp-custom {
-      display: none;
-      gap: 10px;
-      margin-bottom: 5px;
-      flex-wrap: wrap;
-    }
-    .kwsp-col {
-      flex: 1 1 45%;
-    }
-    .kwsp-col label {
-      font-size: 1em;
-      font-weight: 500;
-      margin-top: 0;
-      margin-bottom: 2px;
-    }
-    .kwsp-inp {
-      width: 70px;
-      display: inline-block;
-      font-size: 1em;
-      padding: 8px;
-      margin-bottom: 5px;
-      border-radius: 6px;
-      border: 1.5px solid #ececec;
-      background: #f9f9fd;
-      box-sizing: border-box;
-    }
-
-    /* ====== Buttons ====== */
-    .btn-group {
-      display: flex;
-      gap: 13px;
-      justify-content: center;
-      margin-top: 14px;
-    }
-    button {
-      border: none;
-      outline: none;
-      min-width: 125px;
-      padding: 12px 0;
-      border-radius: 7px;
-      font-size: 1.03em;
-      cursor: pointer;
-      font-weight: 600;
-      transition: 0.15s;
-    }
-    .btn-green {
-      background: #1fbe7b;
-      color: #fff;
-    }
-    .btn-green:hover {
-      background: #157c4a;
-    }
-    .btn-red {
-      background: #fff;
-      color: #d93c3c;
-      border: 1.5px solid #d93c3c;
-    }
-    .btn-red:hover {
-      background: #ffeaea;
-    }
-    .btn-back {
-      margin-top: 22px;
-      width: 100%;
-      background: #fff;
-      color: #1fbe7b;
-      border: 1.5px solid #1fbe7b;
-      font-size: 1em;
-    }
-    .btn-back:hover {
-      background: #dcfaef;
-    }
-
-    /* ====== Output/Results ====== */
-    .output {
-      background: #f9f9fd;
-      padding: 22px 13px 18px 13px;
-      border-radius: 13px;
-      margin-top: 10px;
-    }
-    .result-title {
-      font-size: 1.09em;
-      font-weight: 600;
-      margin-bottom: 18px;
-      text-align: left;
-    }
-    .result-block {
-      margin-bottom: 12px;
-    }
-    .rowx {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      margin: 3px 0;
-      font-size: 1.06em;
-    }
-    .rowx.nobold { font-weight: 400 !important; }
-    .rowx.bold   { font-weight: 600; }
-    .rowx.green  { color: #17964f; }
-    .rowx.total  { font-size: 1.15em; margin: 12px 0; }
-    .mt-16 { margin-top: 16px; }
-    .sep { border-bottom: 1px solid #ebe9e9; margin: 12px 0; }
-
-    /* ====== Feedback & Errors ====== */
-    .error-msg {
-      min-height: 18px;
-      color: #d93c3c;
-      font-size: 0.96em;
-    }
-
-    /* ====== Responsive ====== */
-    @media (max-width: 500px) {
-      .container { margin: 14px 0; }
-      .kwsp-custom { flex-direction: column; gap: 0; }
-      .kwsp-col { flex: 1 1 100%; }
-    }
+    html, body {margin:0; padding:0; background:#f7f7fb; font-family:'Inter', Arial, sans-serif;}
+    .container{max-width:420px; margin:48px auto; background:#fff; border-radius:16px; box-shadow:0 2px 12px #1111; padding:28px 18px 15px;}
+    h2{text-align:center; letter-spacing:-0.5px; font-weight:600; margin-top:0;}
+    label{display:block; font-size:1.06em; font-weight:500; margin-top:15px; margin-bottom:6px;}
+    input[type="number"]{width:99%; font-size:1em; padding:10px; margin-bottom:10px; border-radius:6px; border:1.5px solid #ececec; background:#f9f9fd;}
+    input[type="number"]:focus{border-color:#1fbe7b; background:#fff;}
+    input[type="checkbox"]{vertical-align:middle; margin-right:5px;}
+    .kwsp-custom{display:none; gap:10px; margin-bottom:5px; flex-wrap:wrap;}
+    .kwsp-col{flex:1 1 45%;}
+    .btn-group{display:flex; gap:13px; justify-content:center; margin-top:14px;}
+    button{border:none; outline:none; min-width:125px; padding:12px 0; border-radius:7px; font-size:1.03em; cursor:pointer; font-weight:600;transition:0.15s;}
+    .btn-green{background:#1fbe7b; color:#fff;}
+    .btn-green:hover{background:#157c4a;}
+    .btn-red{background:#fff; color:#d93c3c; border:1.5px solid #d93c3c;}
+    .btn-red:hover{background:#ffeaea;}
+    .btn-back{margin-top:18px; width:100%; background:#fff; color:#1fbe7b; border:1.5px solid #1fbe7b; font-size:1em;}
+    .btn-back:hover{background:#dcfaef;}
+    .output{background:#f9f9fd; padding:22px 13px 18px 13px; border-radius:13px; margin-top:10px;}
+    .result-title{font-size:1.09em; font-weight:600; margin-bottom:18px;}
+    .rowx{display:flex;justify-content:space-between;align-items:baseline;margin:3px 0;font-size:1.06em;}
+    .rowx.nobold{font-weight: 400 !important;}
+    .rowx.bold{font-weight:600;}
+    .rowx.green{color:#17964f;}
+    .rowx.total{font-size:1.15em;margin:12px 0;}
+    .sep{border-bottom:1px solid #ebe9e9;margin:12px 0;}
+    .error-msg{min-height:18px;color:#d93c3c;font-size:0.96em;}
+    @media (max-width: 500px) {.container{margin:14px 0;}.kwsp-custom{flex-direction:column; gap:0;}.kwsp-col{flex:1 1 100%;}}
   </style>
 </head>
 <body>
@@ -193,7 +49,7 @@
       </label>
       <label>
         <input type="checkbox" id="kwsp" checked>
-        Majikan carum KWSP? 
+        Majikan carum KWSP?
       </label>
       <div class="kwsp-custom" id="kwspCustomRow" style="margin-top : 15px">
         <div class="kwsp-col">
@@ -222,11 +78,11 @@ const $cPekerja    = document.getElementById('cPekerja');
 const $cMajikan    = document.getElementById('cMajikan');
 
 function toggleKWSPfield() {
-  if ($kwsp.checked) { 
+  if ($kwsp.checked) {
     $kwspCustom.style.display = "flex";
     if(!$cPekerja.value) $cPekerja.value = 11;
     if(!$cMajikan.value) $cMajikan.value = 13;
-  } else { 
+  } else {
     $kwspCustom.style.display = "none";
   }
 }
@@ -242,9 +98,9 @@ function resetForm(){
 
 document.getElementById('formPartTime').addEventListener('submit', function(e){
   e.preventDefault();
-  const rate = parseFloat(document.getElementById('rate').value.trim() || 0);
-  const hours = parseFloat(document.getElementById('hours').value.trim() || 0);
-  const kwsp = $kwsp.checked;
+  const rate   = parseFloat(document.getElementById('rate').value.trim() || 0);
+  const hours  = parseFloat(document.getElementById('hours').value.trim() || 0);
+  const kwsp   = $kwsp.checked;
   let cPekerja = parseFloat($cPekerja.value || 11);
   let cMajikan = parseFloat($cMajikan.value || 13);
 
@@ -266,10 +122,8 @@ document.getElementById('formPartTime').addEventListener('submit', function(e){
 
   lastInput = { rate, hours, kwsp, cPekerja, cMajikan };
 
-
   const gajiAsas = rate * hours;
   let carumanPekerja = 0, carumanMajikan = 0, gajiBersih = gajiAsas, jumlahCaruman = 0;
-
   if (kwsp) {
     carumanPekerja = gajiAsas * (cPekerja/100);
     carumanMajikan = gajiAsas * (cMajikan/100);
@@ -279,44 +133,42 @@ document.getElementById('formPartTime').addEventListener('submit', function(e){
 
   let html = `<div class="output">
     <div class="result-title">Hasil Kiraan Gaji Part Time</div>
-    <div class="result-block rowx nobold">
+    <div class="rowx nobold">
       <span>Rate kerja per/jam</span><span>RM ${rate.toFixed(2)}</span>
     </div>
-    <div class="result-block rowx nobold">
+    <div class="rowx nobold">
       <span>Bil. Jam Bekerja</span><span>${hours} jam</span>
     </div>
-    <div class="result-block rowx bold mt-16">
-      <span>Gaji Kasar</span><span>RM ${gajiAsas.toFixed(2)}</span>
-    </div>
+    <div class="rowx bold total" style="margin-top:14px"><span>Gaji Kasar</span><span>RM ${gajiAsas.toFixed(2)}</span></div>
     <div class="sep"></div>`;
-
   if(kwsp){
     html += `
-    <div class="result-block rowx">
+    <div class="rowx">
       <span>Caruman KWSP (Pekerja ${cPekerja}% )</span><span>RM ${carumanPekerja.toFixed(2)}</span>
     </div>
-    <div class="result-block rowx">
+    <div class="rowx">
       <span>Caruman KWSP (Majikan ${cMajikan}% )</span><span>RM ${carumanMajikan.toFixed(2)}</span>
     </div>
-    <div class="result-block rowx bold mt-16">
+    <div class="rowx bold total">
       <span>Jumlah Caruman KWSP</span><span>RM ${jumlahCaruman.toFixed(2)}</span>
     </div>
     <div class="sep"></div>
-    <div class="result-block rowx total green bold">
+    <div class="rowx total green bold">
       <span>Gaji Bersih</span><span>RM ${gajiBersih.toFixed(2)}</span>
     </div>
     `;
   } else {
     html += `
     <div class="sep"></div>
-    <div class="result-block rowx total green bold">
+    <div class="rowx total green bold">
       <span>Gaji Diterima</span><span>RM ${gajiBersih.toFixed(2)}</span>
     </div>
     `;
   }
-  html += `<button onclick="showFormAgain()" type="button" class="btn-back">Kira Semula</button>`;
-  html += `</div>`;
-
+  html += `
+    <button onclick="showFormAgain()" type="button" class="btn-back">Kira Semula</button>
+    <button onclick="transferToMain()" type="button" class="btn-green" style="width:100%;margin-top:9px;">Tambah pada Gaji Full Time</button>
+    </div>`;
   document.getElementById('form-view').style.display='none';
   document.getElementById('result-view').innerHTML = html;
   document.getElementById('result-view').style.display="block";
@@ -325,14 +177,42 @@ document.getElementById('formPartTime').addEventListener('submit', function(e){
 function showFormAgain(){
   document.getElementById('result-view').style.display = 'none';
   document.getElementById('form-view').style.display = 'block';
-  document.getElementById('rate').value = lastInput.rate;
-  document.getElementById('hours').value = lastInput.hours;
-  $kwsp.checked = !!lastInput.kwsp;
-  toggleKWSPfield();
-  if(lastInput.kwsp) {
-    $cPekerja.value = lastInput.cPekerja;
-    $cMajikan.value = lastInput.cMajikan;
+  if(lastInput.rate) {
+    document.getElementById('rate').value = lastInput.rate;
+    document.getElementById('hours').value = lastInput.hours;
+    $kwsp.checked = !!lastInput.kwsp;
+    toggleKWSPfield();
+    if(lastInput.kwsp) {
+      $cPekerja.value = lastInput.cPekerja;
+      $cMajikan.value = lastInput.cMajikan;
+    }
   }
+}
+
+function transferToMain() {
+    // Get calculated part time result
+    const rate = lastInput.rate, hours = lastInput.hours, kwsp = lastInput.kwsp;
+    const cPekerja = lastInput.cPekerja, cMajikan = lastInput.cMajikan;
+    const gajiKasar   = rate * hours;
+    let carumanPekerja = 0, carumanMajikan = 0, gajiBersih = gajiKasar;
+    if(kwsp) {
+      carumanPekerja = gajiKasar * (cPekerja/100);
+      carumanMajikan = gajiKasar * (cMajikan/100);
+      gajiBersih = gajiKasar - carumanPekerja;
+    }
+    // Prepare object to send
+    const ptObj = {
+      gajiKasar, gajiBersih, carumanPekerja, carumanMajikan,
+      rate, hours, cPekerja, cMajikan
+    };
+    // Read return url
+    const urlParams = new URLSearchParams(window.location.search);
+    let returnTo = urlParams.get('return');
+    if(!returnTo) returnTo = "https://pwntable.github.io/kalkulator-gaji/";
+
+    // Pass result via query string (base64 encoded JSON)
+    const asBase64 = btoa(JSON.stringify(ptObj));
+    window.location.href = returnTo + "?ptgaji=" + encodeURIComponent(asBase64);
 }
 </script>
 </body>
